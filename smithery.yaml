@@ -1,0 +1,10 @@
+name: markdown-ai-mcp
+description: "MEOK AI Labs — Markdown tools for AI agents and LLMs"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/markdown-ai-mcp
+license: MIT
+categories: [Documentation, Text Processing]
+tags: [markdown, markdown-processing, md-conversion, documentation, text-formatting]
+runtime: python
+entrypoint: server.py
