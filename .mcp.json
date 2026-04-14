@@ -1,23 +1,77 @@
 {
   "name": "markdown-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Markdown tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/markdown-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "MCP server for Markdown processing tools.",
+  "version": "1.0.0",
   "tools": [
-    "convert_to_html",
-    "generate_toc",
-    "lint_markdown",
-    "format_table"
-  ],
-  "categories": [
-    "Documentation",
-    "Text Processing"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "convert_to_html",
+      "description": "Convert Markdown to HTML (supports headers, bold, italic, links, code, lists).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "markdown": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "markdown"
+        ]
+      }
+    },
+    {
+      "name": "generate_toc",
+      "description": "Generate a table of contents from Markdown headers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "markdown": {
+            "type": "string"
+          },
+          "max_depth": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "markdown"
+        ]
+      }
+    },
+    {
+      "name": "lint_markdown",
+      "description": "Lint Markdown for common issues.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "markdown": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "markdown"
+        ]
+      }
+    },
+    {
+      "name": "format_table",
+      "description": "Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "headers": {
+            "type": "string"
+          },
+          "rows": {
+            "type": "string"
+          },
+          "alignment": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "headers",
+          "rows"
+        ]
+      }
+    }
+  ]
 }

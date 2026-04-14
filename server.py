@@ -1,4 +1,9 @@
 """Markdown AI MCP Server — Markdown processing tools."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import re
 import time
 from typing import Any
@@ -18,8 +23,12 @@ def _rate_check(tool: str) -> bool:
     return True
 
 @mcp.tool()
-def convert_to_html(markdown: str) -> dict[str, Any]:
+def convert_to_html(markdown: str, api_key: str = "") -> dict[str, Any]:
     """Convert Markdown to HTML (supports headers, bold, italic, links, code, lists)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("convert_to_html"):
         return {"error": "Rate limit exceeded (50/day)"}
     html = markdown
@@ -73,8 +82,12 @@ def convert_to_html(markdown: str) -> dict[str, Any]:
     return {"html": html_out, "input_length": len(markdown), "output_length": len(html_out)}
 
 @mcp.tool()
-def generate_toc(markdown: str, max_depth: int = 3) -> dict[str, Any]:
+def generate_toc(markdown: str, max_depth: int = 3, api_key: str = "") -> dict[str, Any]:
     """Generate a table of contents from Markdown headers."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("generate_toc"):
         return {"error": "Rate limit exceeded (50/day)"}
     headers = []
@@ -93,8 +106,12 @@ def generate_toc(markdown: str, max_depth: int = 3) -> dict[str, Any]:
     return {"toc": "\n".join(toc_lines), "headers": headers, "header_count": len(headers)}
 
 @mcp.tool()
-def lint_markdown(markdown: str) -> dict[str, Any]:
+def lint_markdown(markdown: str, api_key: str = "") -> dict[str, Any]:
     """Lint Markdown for common issues."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("lint_markdown"):
         return {"error": "Rate limit exceeded (50/day)"}
     issues = []
@@ -121,8 +138,12 @@ def lint_markdown(markdown: str) -> dict[str, Any]:
     return {"issues": issues, "issue_count": len(issues), "severity": severity, "line_count": len(lines)}
 
 @mcp.tool()
-def format_table(headers: str, rows: str, alignment: str = "") -> dict[str, Any]:
+def format_table(headers: str, rows: str, alignment: str = "", api_key: str = "") -> dict[str, Any]:
     """Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("format_table"):
         return {"error": "Rate limit exceeded (50/day)"}
     cols = [h.strip() for h in headers.split(",")]
