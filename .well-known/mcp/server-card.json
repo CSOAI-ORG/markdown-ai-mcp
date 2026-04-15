@@ -1,0 +1,52 @@
+{
+  "name": "markdown-ai",
+  "description": "Markdown Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/markdown-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "convert_to_html",
+      "description": "Convert Markdown to HTML (supports headers, bold, italic, links, code, lists)."
+    },
+    {
+      "name": "generate_toc",
+      "description": "Generate a table of contents from Markdown headers."
+    },
+    {
+      "name": "lint_markdown",
+      "description": "Lint Markdown for common issues."
+    },
+    {
+      "name": "format_table",
+      "description": "Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
