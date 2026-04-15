@@ -1,5 +1,6 @@
 name: markdown-ai-mcp
-description: MEOK AI Labs MCP Server
+description: 'Markdown Ai MCP server. Tools: convert to html, generate toc, lint markdown.
+  Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: convert_to_html
