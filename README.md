@@ -1,52 +1,38 @@
-# Markdown AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Markdown processing, conversion, and linting tools
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/markdown-ai-mcp)](https://github.com/CSOAI-ORG/markdown-ai-mcp/stargazers)
+
+# umarkdownU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/markdown-ai-mcp)](https://www.npmjs.com/package/@meok-ai/markdown-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/markdown-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install markdown-ai-mcp
+# or
+npm install -g @meok-ai/markdown-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `convert_to_html`
-Convert Markdown to HTML (supports headers, bold, italic, links, code, lists).
-
-**Parameters:**
-- `markdown` (str): Markdown text to convert
-
-### `generate_toc`
-Generate a table of contents from Markdown headers.
-
-**Parameters:**
-- `markdown` (str): Markdown text
-- `max_depth` (int): Maximum heading depth (default: 3)
-
-### `lint_markdown`
-Lint Markdown for common issues (line length, trailing whitespace, heading spacing, tabs, broken links).
-
-**Parameters:**
-- `markdown` (str): Markdown text to lint
-
-### `format_table`
-Format data as a Markdown table.
-
-**Parameters:**
-- `headers` (str): Comma-separated column headers
-- `rows` (str): Semicolon-separated rows of comma-separated values
-- `alignment` (str): L/C/R per column
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
