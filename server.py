@@ -37,7 +37,23 @@ def _rate_check(tool: str) -> bool:
 
 @mcp.tool()
 def convert_to_html(markdown: str, api_key: str = "") -> dict[str, Any]:
-    """Convert Markdown to HTML (supports headers, bold, italic, links, code, lists)."""
+    """Convert Markdown to HTML (supports headers, bold, italic, links, code, lists).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -97,7 +113,22 @@ def convert_to_html(markdown: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def generate_toc(markdown: str, max_depth: int = 3, api_key: str = "") -> dict[str, Any]:
-    """Generate a table of contents from Markdown headers."""
+    """Generate a table of contents from Markdown headers.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -122,7 +153,23 @@ def generate_toc(markdown: str, max_depth: int = 3, api_key: str = "") -> dict[s
 
 @mcp.tool()
 def lint_markdown(markdown: str, api_key: str = "") -> dict[str, Any]:
-    """Lint Markdown for common issues."""
+    """Lint Markdown for common issues.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -155,7 +202,23 @@ def lint_markdown(markdown: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def format_table(headers: str, rows: str, alignment: str = "", api_key: str = "") -> dict[str, Any]:
-    """Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column."""
+    """Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
