@@ -1,4 +1,5 @@
-"""Markdown AI MCP Server — Markdown processing tools."""
+"""
+Markdown AI MCP Server — Markdown processing tools."""
 
 import sys, os
 from auth_middleware import check_access

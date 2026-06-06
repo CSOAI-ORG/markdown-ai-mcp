@@ -1,0 +1,33 @@
+# markdown-ai-mcp
+# **Markdown AI MCP Server — Markdown processing tools.**
+
+## Install
+```bash
+pip install markdown-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `convert_to_html`
+Convert Markdown to HTML (supports headers, bold, italic, links, code, lists).
+
+### `generate_toc`
+Generate a table of contents from Markdown headers.
+
+### `lint_markdown`
+Lint Markdown for common issues.
+
+### `format_table`
+Format data as a Markdown table. headers: comma-separated. rows: semicolon-separated rows of comma-separated values. alignment: L/C/R per column.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

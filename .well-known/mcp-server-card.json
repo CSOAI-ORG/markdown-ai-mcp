@@ -1,0 +1,25 @@
+{
+  "name": "markdown-ai-mcp",
+  "title": "Markdown Ai Mcp",
+  "description": "Markdown Ai MCP server. Tools: convert to html, generate toc, lint markdown. Built by MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "convert_to_html"
+    },
+    {
+      "name": "generate_toc"
+    },
+    {
+      "name": "lint_markdown"
+    },
+    {
+      "name": "format_table"
+    }
+  ]
+}

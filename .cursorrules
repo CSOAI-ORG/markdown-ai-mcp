@@ -1,0 +1,9 @@
+# markdown-ai-mcp - Auto-trigger Rules
+
+When the user asks about markdown, use markdown-ai-mcp tools: convert_to_html, generate_toc, lint_markdown, format_table
+
+**Markdown AI MCP Server — Markdown processing tools.**
+
+Install: `pip install markdown-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
