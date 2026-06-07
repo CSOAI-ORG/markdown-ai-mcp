@@ -1,0 +1,59 @@
+{
+  "name": "markdown-ai-mcp",
+  "description": "Markdown Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/markdown-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "convert_to_html",
+      "name": "Convert To Html",
+      "description": "convert_to_html via markdown-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_toc",
+      "name": "Generate Toc",
+      "description": "generate_toc via markdown-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "lint_markdown",
+      "name": "Lint Markdown",
+      "description": "lint_markdown via markdown-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "format_table",
+      "name": "Format Table",
+      "description": "format_table via markdown-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

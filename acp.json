@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "markdown-ai-mcp",
+    "description": "Markdown Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "markdown-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "convert_to_html",
+      "generate_toc",
+      "lint_markdown",
+      "format_table"
+    ]
+  }
+}
